@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Santa Ajuda Finanças — Consultoria Financeira Personalizada</title>
+<meta name="description" content="Organize sua vida financeira com leveza e clareza. Agende uma análise financeira gratuita com a Santa Ajuda Finanças.">
+<meta property="og:title" content="Santa Ajuda Finanças — Consultoria Financeira Personalizada">
+<meta property="og:description" content="Saia da confusão financeira com um plano personalizado, atendimento online e sem julgamento.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Rebeca.jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -944,6 +949,107 @@
 
   footer span { color: var(--ouro); opacity: 0.7; }
 
+
+
+  /* ——— FOTO / PROVA SOCIAL ——— */
+  .hero-photo-card {
+    background: var(--branco);
+    border-radius: 28px;
+    padding: 1rem;
+    box-shadow: 0 20px 60px rgba(42,110,74,0.14), 0 2px 8px rgba(42,110,74,0.06);
+    width: 100%;
+    max-width: 390px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-photo-card img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 22px;
+    display: block;
+  }
+
+  .hero-photo-info {
+    padding: 1.1rem 0.5rem 0.3rem;
+  }
+
+  .hero-photo-info strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--verde);
+    line-height: 1.2;
+  }
+
+  .hero-photo-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--txt-md);
+    margin-top: 0.15rem;
+  }
+
+  .insta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--ouro);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-top: 0.55rem;
+  }
+
+  .insta-link:hover { color: var(--verde); }
+
+  .trust-list {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 1rem;
+    font-size: 0.83rem;
+    color: var(--txt-md);
+  }
+
+  .trust-list span::before {
+    content: '✓ ';
+    color: var(--verde);
+    font-weight: 500;
+  }
+
+  .floating-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.85rem 1.15rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+
+  .floating-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(37,211,102,0.42);
+  }
+
+  .sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
   /* ——— RESPONSIVO ——— */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; padding: 6rem 5% 3rem; }
@@ -981,7 +1087,7 @@
 <!-- NAV -->
 <nav>
   <div class="logo">Santa<span>✦</span>Ajuda</div>
-  <a href="#cta" class="cta-nav">Análise gratuita</a>
+  <a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20agendar%20minha%20an%C3%A1lise%20financeira%20gratuita." class="cta-nav" target="_blank" rel="noopener">Análise gratuita</a>
 </nav>
 
 <!-- HERO -->
@@ -991,7 +1097,7 @@
     <h1>Organize sua vida<br>financeira com <em>leveza</em><br>e clareza</h1>
     <p class="hero-desc">Chega de viver no aperto sem saber para onde o dinheiro vai. A Santa Ajuda Finanças te guia passo a passo para sair da confusão e construir uma vida mais tranquila.</p>
     <div class="hero-ctas">
-      <a href="#cta" class="btn-primary">Agendar análise gratuita</a>
+      <a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20agendar%20minha%20an%C3%A1lise%20financeira%20gratuita." class="btn-primary" target="_blank" rel="noopener">Agendar análise gratuita</a>
       <a href="#como" class="btn-ghost">Como funciona</a>
     </div>
     <div class="hero-micro">
@@ -1002,37 +1108,23 @@
   </div>
 
   <div class="hero-visual">
-    <div class="hero-card-main">
-      <div class="avatar-circle">✦</div>
-      <h3>Seu plano financeiro</h3>
-      <p>Acompanhamento personalizado</p>
-
-      <div class="progress-item">
-        <div class="progress-label">
-          <span>Controle de gastos</span>
-          <span>78%</span>
+    <div class="hero-photo-card">
+      <img src="Rebeca.jpeg" alt="Rebeca Fernandes, consultora da Santa Ajuda Finanças">
+      <div class="hero-photo-info">
+        <strong>Rebeca Fernandes</strong>
+        <span>Consultora da Santa Ajuda Finanças</span>
+        <a class="insta-link" href="https://www.instagram.com/santaajuda_finan/" target="_blank" rel="noopener">Instagram @santaajuda_finan</a>
+        <div class="trust-list">
+          <span>Atendimento online para todo o Brasil</span>
+          <span>Análise inicial gratuita</span>
+          <span>Orientação sem julgamento</span>
         </div>
-        <div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
-      </div>
-      <div class="progress-item">
-        <div class="progress-label">
-          <span>Redução de dívidas</span>
-          <span>54%</span>
-        </div>
-        <div class="progress-bar"><div class="progress-fill" style="width:54%"></div></div>
-      </div>
-      <div class="progress-item">
-        <div class="progress-label">
-          <span>Reserva de emergência</span>
-          <span>32%</span>
-        </div>
-        <div class="progress-bar"><div class="progress-fill" style="width:32%"></div></div>
       </div>
     </div>
 
     <div class="hero-badge">
-      <strong>+200</strong>
-      vidas organizadas
+      <strong>4+</strong>
+      anos de experiência
     </div>
   </div>
 </section>
@@ -1164,7 +1256,7 @@
   <div class="sobre-inner">
     <div class="sobre-visual">
       <div class="sobre-foto">
-        <div class="sobre-foto-inner">✦</div>
+        <img src="Rebeca.jpeg" alt="Rebeca Fernandes, consultora da Santa Ajuda Finanças">
       </div>
       <div class="sobre-stat">
         <strong>4+</strong>
@@ -1174,12 +1266,13 @@
 
     <div class="sobre-txt">
       <p class="section-label">Quem está por trás</p>
-      <h2>Oi, eu sou a Rebeca Fernandes consultora da Santa Ajuda Finanças</h2>
+      <h2>Oi, eu sou a Rebeca Fernandes, consultora da Santa Ajuda Finanças</h2>
+      <a class="insta-link" href="https://www.instagram.com/santaajuda_finan/" target="_blank" rel="noopener">Instagram @santaajuda_finan</a>
       <p>Eu ajudo pessoas que se sentem perdidas financeiramente a organizarem a vida com mais clareza, autonomia e tranquilidade.</p>
       <p>Meu trabalho <strong>não é te julgar</strong> pelo que aconteceu até aqui. É te ajudar a entender sua situação e construir um plano possível para sair do sufoco e começar uma nova fase.</p>
       <p>Porque todo mundo merece ter uma relação mais leve com o dinheiro.</p>
       <br>
-      <a href="#cta" class="btn-primary">Quero minha análise gratuita</a>
+      <a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20agendar%20minha%20an%C3%A1lise%20financeira%20gratuita." class="btn-primary" target="_blank" rel="noopener">Quero minha análise gratuita</a>
     </div>
   </div>
 </section>
@@ -1272,7 +1365,7 @@
     <p class="section-label">Comece agora</p>
     <h2>Agende sua análise<br>financeira gratuita</h2>
     <p>Na análise inicial, vamos entender sua situação atual e mostrar os primeiros passos para organizar sua vida financeira. Você sai da conversa com mais clareza e um caminho mais seguro.</p>
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21+Quero+agendar+minha+an%C3%A1lise+financeira+gratuita." class="btn-primary" style="font-size:1rem; padding:1rem 2.2rem;">Agendar minha análise gratuita</a>
+    <a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20agendar%20minha%20an%C3%A1lise%20financeira%20gratuita." class="btn-primary" target="_blank" rel="noopener" style="font-size:1rem; padding:1rem 2.2rem;">Agendar minha análise gratuita</a>
     <p class="cta-micro">✦ Vagas limitadas por semana &nbsp;•&nbsp; Atendimento online</p>
   </div>
 </section>
@@ -1331,12 +1424,14 @@
 <section class="cta-final">
   <h2>Sua vida financeira não precisa<br>continuar uma <em>bagunça</em></h2>
   <p>Com ajuda certa, clareza e um plano simples, você pode sair do aperto e começar a construir uma relação mais leve com o dinheiro.</p>
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21+Quero+organizar+minhas+finan%C3%A7as." class="btn-final">Quero organizar minhas finanças</a>
+  <a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20organizar%20minhas%20finan%C3%A7as." class="btn-final" target="_blank" rel="noopener">Quero organizar minhas finanças</a>
 </section>
 
 <footer>
-  © 2025 Santa Ajuda Finanças &nbsp;•&nbsp; Feito com <span>✦</span> para quem quer uma vida mais tranquila
+  © 2026 Santa Ajuda Finanças &nbsp;•&nbsp; <a href="https://www.instagram.com/santaajuda_finan/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55); text-decoration:none;">@santaajuda_finan</a> &nbsp;•&nbsp; Feito com <span>✦</span> para quem quer uma vida mais tranquila
 </footer>
+
+<a href="https://wa.me/5541987217497?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Santa%20Ajuda%20e%20quero%20agendar%20minha%20an%C3%A1lise%20financeira%20gratuita." class="floating-whatsapp" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
 
 <script>
   function toggleFaq(el) {
